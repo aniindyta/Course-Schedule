@@ -48,6 +48,11 @@ class AddCourseActivity : AppCompatActivity(), TimePickerFragment.DialogTimeList
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
+            android.R.id.home -> {
+                finish()
+                true
+            }
+
             R.id.action_insert -> {
                 val courseName = edCourseName.text.toString()
                 val selectedDay = spinnerDay.selectedItem.toString()
